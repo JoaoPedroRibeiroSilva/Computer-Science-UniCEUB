@@ -1,0 +1,4 @@
+point = (3, 4)
+distance = ((point[0] ** 2 + point[1] ** 2)) ** 0.5
+
+print(f"distance to origin: {distance}")

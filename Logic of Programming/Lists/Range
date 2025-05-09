@@ -1,0 +1,16 @@
+numeros1 = list(range(0, 10))
+# 0, 1, 2, …, 9
+numeros2 = list(range(0, 11))
+# 0, 1, 2, …, 10
+numeros3 = list(range(0, 11, 2))
+# 0, 2, 4, 6, 8, 10
+numeros4 = list(range(10, 0, -1))
+# 10, 9, 8, …, 1
+
+print(numeros1)
+print(numeros2)
+print(numeros3)
+print(numeros4)
+
+for contar in numeros1:
+   print (contar)

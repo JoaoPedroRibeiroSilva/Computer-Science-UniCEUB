@@ -1,0 +1,7 @@
+salário = float(input("Digite sua renda mensal:"))
+salário_mínimo = 1518.00
+
+if salário < salário_mínimo:
+    print("O salário está incorreto ou fora de legislação")
+else:
+    print("Você recebe",salário - salário_mínimo, "reais a mais que o salário mínimo")

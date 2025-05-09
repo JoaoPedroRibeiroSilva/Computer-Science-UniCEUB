@@ -1,0 +1,11 @@
+nota = float(input("Digite sua nota:"))
+média = 5.0
+
+if nota > média:
+    print("Parabéns, você foi aprovado!")
+
+elif nota == média:
+    print("Parabéns, você foi aprovado!")
+
+else:
+    print("Infelizmente você não foi aprovado.")
