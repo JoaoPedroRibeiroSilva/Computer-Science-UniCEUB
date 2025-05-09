@@ -1,0 +1,16 @@
+a = 10
+b = 5
+
+print(a==b) #False
+print(a!=b) #True
+print(a==b and a!=b) #False
+print(a==b or a!=b) #True
+print(not a==b) #True
+
+#Tabela Verdade
+
+print("Tabela Verdade 'AND'")
+print(True and True) #V^V
+print(True and False) #V^F
+print(False and True) #F^V
+print(False and False) #F^F

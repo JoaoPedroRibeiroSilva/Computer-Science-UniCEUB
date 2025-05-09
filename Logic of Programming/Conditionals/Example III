@@ -1,0 +1,14 @@
+menção_1 = float(input("Digite sua primeira menção:"))
+menção_2 = (float(input("Digite sua segunda menção:"))) * 2
+mf = (menção_1 + menção_2) / 3
+
+if (mf) >= 9:
+    print("Sua menção final é SS")
+elif (mf) >= 7:
+    print("Sua menção final é MS")
+elif mf >= 5:
+    print("Sua menção final é MM")
+elif mf >= 3:
+    print("Sua menção final é MI")
+elif mf >= 0.1:
+    print("Sua menção final é II")

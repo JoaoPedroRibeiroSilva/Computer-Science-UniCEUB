@@ -1,0 +1,54 @@
+compras = [('Feijão 1kg', 3, 15.50)]
+
+
+def adicionar():
+    print('Adicionando...')
+    produto = input('Nome do produto: ')
+    quantidade = int(input('Quantidade: '))
+    preco = float(input('Preço: '))
+    item = (produto, quantidade, preco)
+    compras.append(item)
+
+
+def imprimir():
+    print('Lista de compras:')
+    total = 0.0
+    num_item = 0
+    for item in compras:
+        # print(item[0], item[1], item[2], item[1] * item[2])
+        print(f'{num_item} - {item[0]}  {item[1]} x R$ {item[2]:.2f} = R$ {(item[1] * item[2]):.2f}')
+        total += item[1] * item[2]
+        num_item += 1
+
+    print(f'Total de R$ {total:.2f}')
+
+
+def remover():
+    print('Removendo...')
+    imprimir()
+    indice = int(input('Qual o número do item para remover? '))
+    compras.pop(indice)
+
+
+def main():
+    while True:
+        print('''
+       1 - Adicionar produto
+       2 - Remover produto
+       3 - Imprimir produto
+       4 - Sair
+       ''')
+        opc = input('Qual a opção? ')
+        if opc == '1':
+            adicionar()
+        elif opc == '2':
+            remover()
+        elif opc == '3':
+            imprimir()
+        elif opc == '4':
+            break
+    print('Programa terminou')
+
+
+# Execução principal
+main()
