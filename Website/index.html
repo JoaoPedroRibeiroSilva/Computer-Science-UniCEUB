@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IRA & GPA // Calculator</title>
+
+  <link href="style.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body class="body">
+  <div id="capture" class="container">
+    <header class="header">
+      <h1 class="title">IRA & GPA Calculator</h1>
+      <div class="actions">
+        <button id="theme-switch" class="btn dark-toggle" aria-label="Toggle Dark Mode">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+            <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+            <path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/>
+          </svg>
+        </button>
+        <button onclick="exportPDF()" class="btn export" aria-label="Export PDF">Save as PDF</button>
+      </div>
+    </header>
+
+    <p class="instruction">
+      Enter the <strong>amount of credits</strong> for each grade earned (SS, MS, etc.) per term.<br>
+      <strong>Example:</strong> if you earned an SS in a 4-credit subject, enter <code>4</code> under SS.
+    </p>
+
+    <table class="grades-table">
+      <thead>
+        <tr>
+          <th class="term-column">Term</th>
+          <th>SS</th>
+          <th>MS</th>
+          <th>MM</th>
+          <th>MI</th>
+          <th>II</th>
+          <th>SR</th>
+          <th>Credits</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+
+    <div class="table-actions">
+      <button onclick="addRow()" class="btn add">Add Term</button>
+      <button onclick="removeRow()" class="btn remove">Remove Term</button>
+    </div>
+
+    <div class="results">
+      <p>IRA: <span id="ira">0.00</span> / 5.00</p>
+      <p>GPA: <span id="gpa">0.00</span> / 4.00</p>
+      <p>Average: <span id="media">0.00</span> / 10.00</p>
+    </div>
+  </div>
+</body>
+</html>
