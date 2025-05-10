@@ -1,0 +1,179 @@
+body {
+  background-color: #f3f4f6;
+  color: #111827;
+  transition: all 0.3s ease;
+}
+body.darkmode {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #000;
+}
+.darkmode .title {
+  color: #fff;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+.btn.add {
+  background-color: #2563eb;
+  color: white;
+}
+.btn.add:hover {
+  background-color: #1d4ed8;
+}
+.btn.remove {
+  background-color: #c41b1b;
+  color: white;
+}
+.btn.remove:hover {
+  background-color: #9c1010;
+}
+.btn.export {
+  background-color: #16a34a;
+  color: white;
+}
+.btn.export:hover {
+  background-color: #15803d;
+}
+
+.instruction {
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+.darkmode .instruction {
+  color: #d1d5db;
+}
+
+.grades-table {
+  width: 100%;
+  text-align: center;
+  font-size: 0.875rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.darkmode .grades-table {
+  background-color: #1f2937;
+}
+.grades-table thead tr {
+  background-color: #2E5749;
+  color: white;
+}
+.grades-table thead tr th {
+  padding: 0.5rem;
+}
+.grades-table thead tr th:first-child {
+  border-top-left-radius: 0.5rem;
+}
+.grades-table thead tr th:last-child {
+  border-top-right-radius: 0.5rem;
+}
+.grades-table td {
+  text-align: center;
+}
+.grades-table td input {
+  width: 90px;
+  padding: 0.375rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  background-color: white;
+  color: #111827;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.darkmode .grades-table td input,
+.darkmode input {
+  background-color: #374151;
+  color: white;
+  border-color: #4b5563;
+}
+
+.term-column {
+  border-left: 4px solid #2E5749;
+  padding: 0.5rem;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+
+
+.table-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.results {
+  margin-top: 1.5rem;
+  background-color: #cdcdcd;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.darkmode .results {
+  background-color: #2E5749;
+  color: white;
+}
+
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.darkmode #theme-switch {
+  background-color: #374151;
+}
+#theme-switch svg {
+  fill: var(--primary-color);
+}
+.darkmode #theme-switch svg {
+  fill: #ffffff;
+}
+#theme-switch svg:last-child {
+  display: none;
+}
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+.darkmode #theme-switch svg:last-child {
+  display: block;
+}
