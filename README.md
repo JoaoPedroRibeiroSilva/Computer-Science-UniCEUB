@@ -25,7 +25,3 @@ This repository is available for collaboration via:
 ## Integration with LinkedIN:
 
 The documented projects are also on my LinkedIn profile, composing my professional portfolio
-
-## Presentation:
-
-A guided presentation of these projects are also available on YouTube via:
